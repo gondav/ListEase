@@ -1,4 +1,4 @@
-import { setup, Preview, StoryFn } from '@storybook/vue3';
+import { setup, Preview } from '@storybook/vue3';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { far } from '@fortawesome/free-regular-svg-icons';
@@ -13,7 +13,7 @@ export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: { expanded: true },
   decorators: [
-    (story: StoryFn) => ({
+    (story) => ({
       components: { story },
       template: '<div style="margin: 3em;"><story /></div>',
     }),
